@@ -1,0 +1,268 @@
+{
+  "allow_null_origin": false,
+  "allowed_hosts": [],
+  "allowed_origins": [],
+  "audio": {
+    "audio_device": "YOUR_BLACKHOLE_DEVICE_INDEX",
+    "audio_device_name": "Core Audio: BlackHole 2ch",
+    "delay_ms": 0,
+    "fft_size": 4096,
+    "mic_rate": 44100,
+    "min_volume": 0.2,
+    "onset_method": "hfc",
+    "pitch_method": "yinfft",
+    "pitch_tolerance": 0.8,
+    "sample_rate": 60,
+    "tempo_method": "default"
+  },
+  "configuration_version": "2.3.6",
+  "create_segments": true,
+  "dev_mode": false,
+  "devices": [
+    {
+      "config": {
+        "center_offset": 0,
+        "create_segments": false,
+        "icon_name": "wled",
+        "ip_address": "YOUR_CORNER_IP",
+        "name": "Corner",
+        "pixel_count": 214,
+        "refresh_rate": 62,
+        "rgbw_led": true,
+        "sync_mode": "DDP",
+        "timeout": 1
+      },
+      "id": "YOUR_CORNER_DEVICE_ID",
+      "type": "wled"
+    },
+    {
+      "config": {
+        "center_offset": 0,
+        "create_segments": false,
+        "icon_name": "wled",
+        "ip_address": "YOUR_SHELF_IP",
+        "name": "Shelf",
+        "pixel_count": 140,
+        "refresh_rate": 62,
+        "rgbw_led": true,
+        "sync_mode": "DDP",
+        "timeout": 1
+      },
+      "id": "YOUR_SHELF_DEVICE_ID",
+      "type": "wled"
+    }
+  ],
+  "flush_on_deactivate": false,
+  "global_brightness": 1.0,
+  "global_transitions": true,
+  "host": "YOUR_LOOPBACK_IP",
+  "hosts": [],
+  "instance_id": "YOUR_LEDFX_INSTANCE_ID",
+  "integrations": [],
+  "lifx_broadcast_address": "YOUR_BROADCAST_IP",
+  "lifx_discovery_timeout": 30,
+  "melbank_collection": [
+    {
+      "config": {
+        "max_frequency": 350,
+        "min_frequency": 20,
+        "name": "Melbank 0"
+      },
+      "id": "melbank-0"
+    },
+    {
+      "config": {
+        "max_frequency": 2000,
+        "min_frequency": 20,
+        "name": "Melbank 1"
+      },
+      "id": "melbank-1"
+    },
+    {
+      "config": {
+        "max_frequency": 15000,
+        "min_frequency": 20,
+        "name": "Melbank 2"
+      },
+      "id": "melbank-2"
+    }
+  ],
+  "melbanks": {
+    "coeffs_type": "matt_mel",
+    "max_frequencies": [350, 2000, 15000],
+    "min_frequency": 20,
+    "peak_isolation": 0.4,
+    "samples": 24
+  },
+  "now_playing": {},
+  "playlists": {},
+  "port": 8888,
+  "port_s": 8443,
+  "scan_on_startup": false,
+  "scenes": {
+    "music": {
+      "name": "Music",
+      "scene_image": "Wallpaper",
+      "scene_midiactivate": null,
+      "scene_payload": null,
+      "scene_puturl": null,
+      "scene_tags": null,
+      "virtuals": {
+        "YOUR_SHELF_DEVICE_ID": {
+          "action": "activate",
+          "config": {
+            "background_brightness": 1,
+            "background_color": "#000000",
+            "blur": 3,
+            "brightness": 0.35,
+            "diag": false,
+            "flip": false,
+            "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+            "gradient_roll": 0,
+            "mirror": false
+          },
+          "type": "wavelength"
+        },
+        "YOUR_CORNER_DEVICE_ID": {
+          "action": "activate",
+          "config": {
+            "background_brightness": 1,
+            "background_color": "#000000",
+            "blur": 3,
+            "brightness": 0.35,
+            "diag": false,
+            "flip": false,
+            "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+            "gradient_roll": 0,
+            "mirror": false
+          },
+          "type": "wavelength"
+        }
+      }
+    }
+  },
+  "sendspin_always_on": true,
+  "sendspin_servers": {},
+  "startup_playlist_id": "",
+  "startup_scene_id": "",
+  "transmission_mode": "compressed",
+  "ui_brightness_boost": 0.0,
+  "user_colors": {},
+  "user_gradients": {},
+  "user_presets": {},
+  "virtuals": [
+    {
+      "auto_generated": false,
+      "config": {
+        "center_offset": 0,
+        "complex_segments": false,
+        "frequency_max": 15000,
+        "frequency_min": 20,
+        "grouping": 1,
+        "icon_name": "wled",
+        "mapping": "span",
+        "max_brightness": 1.0,
+        "name": "Corner",
+        "preview_only": false,
+        "rotate": 0,
+        "rows": 1,
+        "transition_mode": "Add",
+        "transition_time": 0.4
+      },
+      "effect": {
+        "config": {
+          "background_brightness": 1.0,
+          "background_color": "#000000",
+          "blur": 3.0,
+          "brightness": 0.35,
+          "diag": false,
+          "flip": false,
+          "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+          "gradient_roll": 0.0,
+          "mirror": false
+        },
+        "type": "wavelength"
+      },
+      "effects": {
+        "wavelength": {
+          "config": {
+            "background_brightness": 1.0,
+            "background_color": "#000000",
+            "blur": 3.0,
+            "brightness": 0.35,
+            "diag": false,
+            "flip": false,
+            "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+            "gradient_roll": 0.0,
+            "mirror": false
+          },
+          "type": "wavelength"
+        }
+      },
+      "id": "YOUR_CORNER_DEVICE_ID",
+      "is_device": "YOUR_CORNER_DEVICE_ID",
+      "last_effect": "wavelength",
+      "segments": [
+        ["YOUR_CORNER_DEVICE_ID", 0, 213, false]
+      ]
+    },
+    {
+      "auto_generated": false,
+      "config": {
+        "center_offset": 0,
+        "complex_segments": false,
+        "frequency_max": 15000,
+        "frequency_min": 20,
+        "grouping": 1,
+        "icon_name": "wled",
+        "mapping": "span",
+        "max_brightness": 1.0,
+        "name": "Shelf",
+        "preview_only": false,
+        "rotate": 0,
+        "rows": 1,
+        "transition_mode": "Add",
+        "transition_time": 0.4
+      },
+      "effect": {
+        "config": {
+          "background_brightness": 1.0,
+          "background_color": "#000000",
+          "blur": 3.0,
+          "brightness": 0.35,
+          "diag": false,
+          "flip": false,
+          "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+          "gradient_roll": 0.0,
+          "mirror": false
+        },
+        "type": "wavelength"
+      },
+      "effects": {
+        "wavelength": {
+          "config": {
+            "background_brightness": 1.0,
+            "background_color": "#000000",
+            "blur": 3.0,
+            "brightness": 0.35,
+            "diag": false,
+            "flip": false,
+            "gradient": "linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(255, 120, 0) 14%, rgb(255, 200, 0) 28%, rgb(0, 255, 0) 42%, rgb(0, 199, 140) 56%, rgb(0, 0, 255) 70%, rgb(128, 0, 128) 84%, rgb(255, 0, 178) 98%)",
+            "gradient_roll": 0.0,
+            "mirror": false
+          },
+          "type": "wavelength"
+        }
+      },
+      "id": "YOUR_SHELF_DEVICE_ID",
+      "is_device": "YOUR_SHELF_DEVICE_ID",
+      "last_effect": "wavelength",
+      "segments": [
+        ["YOUR_SHELF_DEVICE_ID", 0, 139, false]
+      ]
+    }
+  ],
+  "visualisation_fps": 30,
+  "visualisation_maxlen": 256,
+  "wled_preferences": {}
+}

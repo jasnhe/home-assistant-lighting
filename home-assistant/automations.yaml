@@ -1,0 +1,41 @@
+- id: 'YOUR_SCREEN_AUTOMATION_ID'
+  alias: Pixel 7 - Automatic screen brightness
+  description: >-
+    Pixel-calibrated: about 70% daytime (raw 40), about 20% evening
+    (raw 3), minimum brightness overnight or both WLED off (raw 0).
+    Reapply on startup, wake and reconnect.
+  trigger:
+    - platform: time
+      at:
+        - '07:00:00'
+        - '19:00:00'
+        - '23:00:00'
+    - platform: state
+      entity_id:
+        - light.YOUR_SHELF_ENTITY
+        - light.YOUR_CORNER_COLOUR_ENTITY
+      to: null
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: switch.YOUR_PHONE_SCREEN
+      to: 'on'
+    - platform: state
+      entity_id: number.YOUR_PHONE_SCREEN_BRIGHTNESS
+      from: unavailable
+    - platform: time_pattern
+      minutes: /5
+  condition: []
+  action:
+    - action: number.set_value
+      target:
+        entity_id: number.YOUR_PHONE_SCREEN_BRIGHTNESS
+      data:
+        value: >-
+          {% set h = now().hour %}
+          {% set lights_on =
+            is_state('light.YOUR_SHELF_ENTITY', 'on')
+            or is_state('light.YOUR_CORNER_COLOUR_ENTITY', 'on') %}
+          {{ 0 if h < 7 or h >= 23 or not lights_on
+             else (40 if h < 19 else 3) }}
+  mode: restart

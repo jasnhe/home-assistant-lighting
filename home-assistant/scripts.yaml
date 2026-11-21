@@ -1,0 +1,271 @@
+bedside_day:
+  alias: Bedside Day
+  description: Bedside Day lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: scene.apply
+      data:
+        entities:
+          light.YOUR_SHELF_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [255, 160, 55, 180]
+            effect: Solid
+          light.YOUR_CORNER_MASTER_ENTITY:
+            state: 'on'
+            brightness: 255
+          light.YOUR_CORNER_COLOUR_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [255, 160, 55, 180]
+            effect: Solid
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        effect: Day
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        brightness_pct: 100
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        color_temp_kelvin: 2700
+
+bedside_warm:
+  alias: Bedside Warm
+  description: Bedside Warm lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: scene.apply
+      data:
+        entities:
+          light.YOUR_SHELF_ENTITY:
+            state: 'on'
+            brightness: 102
+            color_mode: rgbw
+            rgbw_color: [255, 160, 55, 180]
+            effect: Solid
+          light.YOUR_CORNER_MASTER_ENTITY:
+            state: 'on'
+            brightness: 102
+          light.YOUR_CORNER_COLOUR_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [255, 160, 55, 180]
+            effect: Solid
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        effect: Day
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        brightness_pct: 40
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        color_temp_kelvin: 2700
+
+bedside_cinema:
+  alias: Bedside Cinema
+  description: Bedside Cinema lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: scene.apply
+      data:
+        entities:
+          light.YOUR_SHELF_ENTITY:
+            state: 'on'
+            brightness: 26
+            color_mode: rgbw
+            rgbw_color: [100, 30, 255, 0]
+            effect: Solid
+          light.YOUR_CORNER_MASTER_ENTITY:
+            state: 'on'
+            brightness: 26
+          light.YOUR_CORNER_COLOUR_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [100, 30, 255, 0]
+            effect: Solid
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        effect: Color
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        brightness_pct: 10
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        rgb_color: [100, 30, 255]
+
+bedside_ambient:
+  alias: Bedside Ambient
+  description: Bedside Ambient lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: scene.apply
+      data:
+        entities:
+          light.YOUR_SHELF_ENTITY:
+            state: 'on'
+            brightness: 51
+            color_mode: rgbw
+            rgbw_color: [255, 75, 20, 0]
+            effect: Solid
+          light.YOUR_CORNER_MASTER_ENTITY:
+            state: 'on'
+            brightness: 51
+          light.YOUR_CORNER_COLOUR_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [255, 75, 20, 0]
+            effect: Solid
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        effect: Color
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        brightness_pct: 20
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        rgb_color: [255, 75, 20]
+
+bedside_night:
+  alias: Bedside Night
+  description: Bedside Night lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: scene.apply
+      data:
+        entities:
+          light.YOUR_SHELF_ENTITY:
+            state: 'on'
+            brightness: 5
+            color_mode: rgbw
+            rgbw_color: [255, 25, 0, 0]
+            effect: Solid
+          light.YOUR_CORNER_MASTER_ENTITY:
+            state: 'on'
+            brightness: 5
+          light.YOUR_CORNER_COLOUR_ENTITY:
+            state: 'on'
+            brightness: 255
+            color_mode: rgbw
+            rgbw_color: [255, 25, 0, 0]
+            effect: Solid
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        effect: Color
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        brightness_pct: 2
+    - action: light.turn_on
+      target:
+        entity_id: light.YOUR_LAMP_WHITE_ENTITY
+      data:
+        rgb_color: [255, 25, 0]
+
+bedside_all_off:
+  alias: Bedside All off
+  description: Bedside All off lighting. Overrides LedFx music input.
+  mode: single
+  sequence:
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '1'
+    - action: light.turn_off
+      target:
+        entity_id:
+          - light.YOUR_SHELF_ENTITY
+          - light.YOUR_CORNER_MASTER_ENTITY
+          - light.YOUR_LAMP_WHITE_ENTITY
+
+bedside_music:
+  alias: Bedside Music
+  description: >-
+    Allows the two WLED strips to follow LedFx running on the Mac.
+    Start LedFx and play Mac audio through Multi-Output Device first.
+  icon: mdi:music
+  mode: single
+  sequence:
+    - action: light.turn_on
+      target:
+        entity_id:
+          - light.YOUR_SHELF_ENTITY
+          - light.YOUR_CORNER_MASTER_ENTITY
+      data:
+        brightness: 255
+    - action: select.select_option
+      target:
+        entity_id:
+          - select.YOUR_SHELF_LIVE_OVERRIDE
+          - select.YOUR_CORNER_LIVE_OVERRIDE
+      data:
+        option: '0'

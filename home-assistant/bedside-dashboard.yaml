@@ -1,0 +1,18 @@
+title: Bedside
+views:
+  - title: Bedside
+    path: bedside
+    icon: mdi:bed-clock
+    type: panel
+    cards:
+      - type: custom:bedside-console
+        shelf: light.YOUR_SHELF_ENTITY
+        corner: light.YOUR_CORNER_MASTER_ENTITY
+        corner_color: light.YOUR_CORNER_COLOUR_ENTITY
+        lamp: light.YOUR_LAMP_CONTROL_ENTITY
+        lamp_white_entity: light.YOUR_LAMP_WHITE_ENTITY
+        night_start: '23:00'
+        night_end: '07:00'
+        night_lights:
+          - light.YOUR_SHELF_ENTITY
+          - light.YOUR_CORNER_MASTER_ENTITY
