@@ -21,6 +21,14 @@ Each scene script first switches the strips' "live override" off, so LedFx can't
 
 ![Bedside dashboard on the phone](images/bedside-dashboard.png)
 
+Demo: switching scenes from the bedside dashboard, with the lights changing in the room.
+
+
+https://github.com/user-attachments/assets/d79f6171-f06e-44cc-ae4d-ce9ca48ac1f9
+
+
+
+
 ## Hardware
 
 - Linux mini PC running Home Assistant
