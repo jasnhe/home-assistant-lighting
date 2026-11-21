@@ -19,6 +19,8 @@ Mac audio -> BlackHole -> LedFx ----------- live stream (DDP) ----+
 
 Each scene script first switches the strips' "live override" off, so LedFx can't overwrite the colours, then applies the colours and brightness. The Music script does the reverse.
 
+![Bedside dashboard on the phone](images/bedside-dashboard.png)
+
 ## Hardware
 
 - Linux mini PC running Home Assistant
@@ -46,4 +48,4 @@ Everything personal has been replaced with `YOUR_...` placeholders (entity IDs, 
 ## Notes
 
 - The dashboard card and scripts were written with help from ChatGPT, then tested on my own setup.
-- Not included yet: dashboard screenshots, and a prototype that wakes the phone screen on motion.
+- Not included yet: a prototype that wakes the phone screen on motion.
